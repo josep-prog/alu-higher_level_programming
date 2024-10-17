@@ -9,5 +9,5 @@ def divisible_by_2(my_list=[]):
     The new list should have the same size as the original list.
     You are not allowed to import any module.
     """
-    
+
     return [num % 2 == 0 for num in my_list]
