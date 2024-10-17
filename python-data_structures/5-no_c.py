@@ -9,9 +9,9 @@ def no_c(my_string):
     You are not allowed to use str.replace().
     """
     new_str = ""
-    
+
     for char in my_string:
         if char not in ('c', 'C'):
             new_str += char
-            
+
     return new_str
