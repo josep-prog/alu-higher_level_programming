@@ -5,12 +5,7 @@ if __name__ == "__main__":
     a = 10
     b = 5
 
-    results = [
-        f"{a} + {b} = {add(a, b)}",
-        f"{a} - {b} = {sub(a, b)}",
-        f"{a} * {b} = {mul(a, b)}",
-        f"{a} / {b} = {div(a, b)}"
-    ]
-
-    for result in results:
-        print(result)
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
