@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Print the numbers from 1 to 100 separated by a space.
-#For numbers that are divisible by three, output "Fizz" in place of the number.
-#For numbers that are divisible by five, output "Buzz" instead of the number.
-#For numbers that are divisible by both three and five, output "FizzBuzz" in lieu of the number.
+For numbers that are divisible by three, output "Fizz" in place of the number.
+For numbers that are divisible by five, output "Buzz" instead of the number.
+For numbers that are divisible by both three and five, output "FizzBuzz" in lieu of the number.
 
   """
 
