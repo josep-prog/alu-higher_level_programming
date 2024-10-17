@@ -1,26 +1,19 @@
 #!/usr/bin/python3
+"""Print the numbers from 1 to 100 separated by a space.
+#For numbers that are divisible by three, output "Fizz" in place of the number.
+#For numbers that are divisible by five, output "Buzz" instead of the number.
+#For numbers that are divisible by both three and five, output "FizzBuzz" in lieu of the number.
+
+  """
+
 
 def fizzbuzz():
-    output = []
-    fizzbuzz_map = {
-        (3, 5): "FizzBuzz",
-        (3,): "Fizz",
-        (5,): "Buzz"
-    }
-
     for number in range(1, 101):
-        result = ""
-        for key in fizzbuzz_map:
-            if all(number % k == 0 for k in key):
-                result = fizzbuzz_map[key]
-                break
-        if result:
-            output.append(result)
+        if number % 3 == 0 and number % 5 == 0:
+            print("FizzBuzz ", end="")
+        elif number % 3 == 0:
+            print("Fizz ", end="")
+        elif number % 5 == 0:
+            print("Buzz ", end="")
         else:
-            output.append(str(number))
-
-    print(" ".join(output))  # Join the list into a single string with spaces
-
-# Example usage
-if __name__ == "__main__":
-    fizzbuzz()
+            print("{} ".format(number), end="")
