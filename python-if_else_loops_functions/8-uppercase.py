@@ -3,13 +3,15 @@
 
 def uppercase(str):
     """Function to print a string in uppercase."""
-    result = ""
+    result = []
     for char in str:
-        if 'a' <= char <= 'z':  # Check if the character is lowercase
-            result += chr(ord(char) - (ord('a') - ord('A')))  # Convert to uppercase
+        if 'a' <= char <= 'z':
+            # Convert to uppercase and add to the list
+            result.append(chr(ord(char) - 32))
         else:
-            result += char  # Keep the character as is
-    print("{}".format(result))
+            result.append(char)  # Keep the character as is
+    # Join the list into a string and print it
+    print("{}".format("".join(result)))
 
 # Example usage
 uppercase("best")
