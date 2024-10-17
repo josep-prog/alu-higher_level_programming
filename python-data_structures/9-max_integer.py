@@ -2,21 +2,20 @@
 
 
 def max_integer(my_list=[]):
-    """Function that returns the biggest integer in a list.
+    """function that returns biggest integer in list
 
-    If the list is empty, return None.
-    You can assume that the list only contains integers.
-    You are not allowed to import any module.
-    You are not allowed to use the builtin max().
+    If the list is empty, return None
+    You can assume that the list only contains integers
+    You are not allowed to import any module
+    You are not allowed to use the builtin max()
     """
 
-    if not my_list:
-        return None
+    list_length = len(my_list)
 
-    max_value = my_list[0]  # Start with the first element
+    if list_length == 0:
+        return
 
-    for num in my_list:
-        if num > max_value:
-            max_value = num  # Update max_value if a larger number is found
+    # sort the list in ascending order
+    my_list.sort()
 
-    return max_value
+    return my_list[-1]
