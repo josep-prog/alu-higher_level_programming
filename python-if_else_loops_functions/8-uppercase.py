@@ -1,18 +1,12 @@
 #!/usr/bin/python3
-# Author - JOSEPH Nishimwe
+
 
 def uppercase(str):
     """Function to print a string in uppercase."""
-    result = []
+    result = ""
     for char in str:
-        if 'a' <= char <= 'z':
-            # Convert to uppercase and add to the list
-            result.append(chr(ord(char) - 32))
+        if ord(char) >= 97 and ord(char) <= 122:
+            result += chr(ord(char) - 32)
         else:
-            result.append(char)  # Keep the character as is
-    # Join the list into a string and print it
-    print("{}".format("".join(result)))
-
-# Example usage
-uppercase("best")
-uppercase("Best School 98 Battery street")
+            result += char
+    print("{}".format(result))
