@@ -2,10 +2,13 @@
 
 
 def print_list_integer(my_list=[]):
-    """Print integers from a list, one per line.
-    
-    Assume the list only contains integers.
-    Use str.format() to print.
+    """print integers function
+
+    One integer per line
+    Don't import any module or cast integers to strings
+    Assume the list only contains integers
+    Use str.format() to print
     """
-    for integer in my_list:
-        print("{:d}".format(integer))
+    if my_list:
+        for integer in my_list:
+            print("{:d}".format(integer))
