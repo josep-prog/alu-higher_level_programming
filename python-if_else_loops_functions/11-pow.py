@@ -1,15 +1,10 @@
 #!/usr/bin/python3
 
 def pow(a, b):
-    """Function to compute a to the power of b using a loop."""
+    """Function to compute a to the power of b using recursion."""
     if b == 0:
-        return 1  # Any number to the power of 0 is 1
+        return 1  # Base case: any number to the power of 0 is 1
     elif b < 0:
-        a = 1 / a  # Take the reciprocal for negative powers
-        b = -b  # Make b positive
+        return 1 / pow(a, -b)  # Handle negative powers
     
-    result = 1
-    for _ in range(b):
-        result *= a  # Multiply a, b times
-    
-    return result
+    return a * pow(a, b - 1)  # Recursive case
