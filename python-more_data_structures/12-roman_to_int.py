@@ -16,13 +16,15 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    def helper(index):
-        if index >= len(roman_string):
-            return 0
-        current_value = roman_values[roman_string[index]]
-        if index + 1 < len(roman_string) and current_value < roman_values[roman_string[index + 1]]:
-            return -current_value + helper(index + 1)
-        else:
-            return current_value + helper(index + 1)
+    result = 0
+    prev_value = 0
 
-    return helper(0)
+    for char in reversed(roman_string):
+        current_value = roman_values[char]
+        if current_value < prev_value:
+            result -= current_value
+        else:
+            result += current_value
+        prev_value = current_value
+
+    return result
