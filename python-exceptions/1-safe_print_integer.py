@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 
+
 def safe_print_integer(value):
     """
-    prints an integer with "{:d}".format().
-    you have to use try: / except:
-    you have to use "{:d}".format() to print a integer
-    you are not allowed to import an module
-    you are not allowed to use typ()
-
-    Args:
-        value: value to be printed
-
-        Returns: True if value has correctly printed (it means the value is integer).otherwise, returns False.
+    Prints an integer with "{:d}".format().
+    You have to use try: / except:
+    You have to use "{:d}".format() to print as integer
+    You are not allowed to import any module
+    You are not allowed to use type()
+        Args:
+            value: integer to be printed.
+        Returns: True if value has been correctly printed (it means the,
+                 value is an integer). Otherwise, returns False.
     """
     try:
-        #attempt to convert tpo integer and print 
-        print("{:d}".format(int(vlue)))
-    except (valueError, TypeError):
+        print("{:d}".format(value))
+    except (ValueError, TypeError):
         return False
-    return True
+    else:
+        return True
