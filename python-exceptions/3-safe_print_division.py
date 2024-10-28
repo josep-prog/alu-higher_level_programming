@@ -13,7 +13,8 @@ def safe_print_division(a, b):
         a: Integer
         b: Integer
 
-    Returns: 
+
+    Returns:
         The value of the division, otherwise: None
     """
     result = None  # Initialize result to None
