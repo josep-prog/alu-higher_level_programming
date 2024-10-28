@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
 def raise_exception_msg(message=""):
-    """Function that logs and raises a name exception with a message.
+    """function that raises a name exception with a message.
+
+    You are not allowed to import any module
 
     Args:
-        message: string of message to be raised.
+        message: string of message to be raised
     """
-    print(f"Raising NameError with message: {message}")  # Log the message
     raise NameError(message)
