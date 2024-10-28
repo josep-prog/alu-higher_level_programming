@@ -85,7 +85,6 @@ class Square:
             # Print the vertical position (y-axis)
             for _ in range(self.__position[1]):
                 print()  # Print empty lines for vertical position
-            
             # Print the square
             for _ in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
