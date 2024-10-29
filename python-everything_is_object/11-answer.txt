@@ -1,21 +1,6 @@
 #!/usr/bin/python3
+
 # List comparison
 l1 = [1, 2, 3]
 l2 = [1, 2, 3]
 print(l1 is l2)  # This will print False
-
-# LockedClass definition
-class LockedClass:
-    """
-    Prevents the user from dynamically creating new instance attributes,
-    except if the new instance attribute is called first_name.
-    """
-    __slots__ = ["first_name"]
-
-    def __init__(self):
-        self.first_name = "first_name"
-
-# You can create an instance of LockedClass like this:
-locked_instance = LockedClass()
-print(locked_instance.first_name)  # This will print "first_name"
-
