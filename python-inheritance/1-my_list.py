@@ -3,13 +3,14 @@
 
 
 class MyList(list):
-    """Class that inherits from list."""
-    
-    def append(self, value):
-        """Append an item and keep the list sorted."""
-        super().append(value)
-        self.sort()  # Sort after every append
+    """Class that inherits from list.
 
+    Args:
+        list (list): list to sort in ascending order.
+    """
     def print_sorted(self):
-        """Prints a list in ascending order."""
-        print(self)  # This will already be sorted due to the overridden append
+        """Prints a list in ascending order.
+        """
+        list_ = self[:]
+        list_.sort()
+        print(list_)
