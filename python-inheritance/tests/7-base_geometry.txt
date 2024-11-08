@@ -11,7 +11,10 @@ def import_module_from_file(module_name, file_path):
     return module
 
 # Import BaseGeometry from a file that begins with a number
-BaseGeometry = import_module_from_file('BaseGeometry', '7-base_geometry.py').BaseGeometry
+module_name = 'BaseGeometry'
+file_path = '7-base_geometry.py'  # Ensure this path is correct
+
+BaseGeometry = import_module_from_file(module_name, file_path).BaseGeometry
 
 bg = BaseGeometry()
 
