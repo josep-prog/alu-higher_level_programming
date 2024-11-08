@@ -1,29 +1,19 @@
 #!/usr/bin/python3
-""" This module creates a class, 'myList'
-    This module creates a class, 'myList'
-    This module creates a class, 'myList'
 """
-
+This module defines a class MyList that inherits from the built-in list class.
+It adds a method to print the list sorted in ascending order.
+"""
 
 class MyList(list):
     """
-    MyList class that inherits from the built-in list class and .
-    This class is designed to represent a list with an added met.
+    MyList is a subclass of the built-in list class.
+    This class adds a method `print_sorted` to print the list in sorted order.
     """
-
-    def __init__(self):
-        """
-        Initializes an instance of the MyList class.
-
-        Inherits from the built-in list class and does not require
-        """
-        super().__init__()  # Initialize the parent class (list)
 
     def print_sorted(self):
         """
-        Prints the elements of the list in ascending sorted order.
-
-        Uses Python's built-in sorted() function to sort ult
-        without modifying the original list order.
+        Prints the list in ascending order without modifying the original list.
+        
+        The sorted() function is used to return a new sorted list, which is then printed.
         """
         print(sorted(self))
