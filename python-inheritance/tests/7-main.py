@@ -1,22 +1,29 @@
-#!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+import unittest
+from 7-base_geometry import BaseGeometry
 
-bg = BaseGeometry()
+class TestBaseGeometry(unittest.TestCase):
 
-bg.integer_validator("my_int", 12)
-bg.integer_validator("width", 89)
+    def setUp(self):
+        self.bg = BaseGeometry()
 
-try:
-    bg.integer_validator("name", "John")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def test_integer_validator_valid(self):
+        self.bg.integer_validator("my_int", 12)
+        self.bg.integer_validator("width", 89)
 
-try:
-    bg.integer_validator("age", 0)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def test_integer_validator_type_error(self):
+        with self.assertRaises(TypeError) as context:
+            self.bg.integer_validator("name", "John")
+        self.assertEqual(str(context.exception), "name must be an integer")
 
-try:
-    bg.integer_validator("distance", -4)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def test_integer_validator_value_error_zero(self):
+        with self.assertRaises(ValueError) as context:
+            self.bg.integer_validator("age", 0)
+        self.assertEqual(str(context.exception), "age must be greater than 0")
+
+    def test_integer_validator_value_error_negative(self):
+        with self.assertRaises(ValueError) as context:
+            self.bg.integer_validator("distance", -4)
+        self.assertEqual(str(context.exception), "distance must be greater than 0")
+
+if __name__ == '__main__':
+    unittest.main()
