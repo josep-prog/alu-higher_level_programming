@@ -1,16 +1,29 @@
 #!/usr/bin/python3
-"""Defines a class MyList that inherits from list"""
+""" This module creates a class, 'myList'
+    This module creates a class, 'myList'
+    This module creates a class, 'myList'
+"""
 
 
 class MyList(list):
-    """Class that inherits from list.
-
-    Args:
-        list (list): list to sort in ascending order.
     """
-    def print_sorted(self):
-        """Prints a list in ascending order.
+    MyList class that inherits from the built-in list class and .
+    This class is designed to represent a list with an added met.
+    """
+
+    def __init__(self):
         """
-        list_ = self[:]
-        list_.sort()
-        print(list_)
+        Initializes an instance of the MyList class.
+
+        Inherits from the built-in list class and does not require
+        """
+        super().__init__()  # Initialize the parent class (list)
+
+    def print_sorted(self):
+        """
+        Prints the elements of the list in ascending sorted order.
+
+        Uses Python's built-in sorted() function to sort ult
+        without modifying the original list order.
+        """
+        print(sorted(self))
