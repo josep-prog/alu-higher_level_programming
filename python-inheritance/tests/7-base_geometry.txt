@@ -1,0 +1,12 @@
+BaseGeometry Class Documentation
+
+This class provides methods to validate integer values and calculate area.
+
+Methods:
+- area(): Raises an Exception with the message "area() is not implemented".
+- integer_validator(name, value): Validates that value is a positive integer.
+
+Expected Output from Tests:
+[TypeError] name must be an integer
+[ValueError] age must be greater than 0
+[ValueError] distance must be greater than 0
