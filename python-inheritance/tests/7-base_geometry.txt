@@ -1,5 +1,17 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+import importlib.util
+import sys
+
+# Function to import a module from a file path
+def import_module_from_file(module_name, file_path):
+    spec = importlib.util.spec_from_file_location(module_name, file_path)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module
+
+# Import BaseGeometry from a file that begins with a number
+BaseGeometry = import_module_from_file('BaseGeometry', '7-base_geometry.py').BaseGeometry
 
 bg = BaseGeometry()
 
