@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Defines a class Rectangle based on 8-base_geometry.py."""
 
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
-
-
     """Class Rectangle"""
 
     def __init__(self, width, height):
