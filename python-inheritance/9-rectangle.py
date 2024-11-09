@@ -1,4 +1,4 @@
-# 9-rectangle.py
+#!/usr/bin/python3
 """Defines a class Rectangle based on 8-base_geometry.py."""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
@@ -13,11 +13,9 @@ class Rectangle(BaseGeometry):
             width (int): width of rectangle.
             height (int): height of rectangle.
         """
-        # Validate inputs before assignment
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-        
-        # Now assign after validation
+
         self.__width = width
         self.__height = height
 
