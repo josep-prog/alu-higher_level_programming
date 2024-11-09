@@ -6,21 +6,32 @@ Attributes:
     height (int): height of the rectangle.
 """
 
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Class Rectangle"""
+    """Class Rectangle that inherits from BaseGeometry"""
 
     def __init__(self, width, height):
-        """Creates new instances of Rectangle.
+        """Creates a new instance of Rectangle.
 
         Args:
             width (int): width of rectangle.
             height (int): height of rectangle.
         """
-        self.__width = width
-        self.__height = height
+        # Validate before assigning to private variables
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+
+        # Now assign to the private variables after validation
+        self.__width = width
+        self.__height = height
+
+    def __str__(self):
+        """Returns a string representation of the rectangle."""
+        return f"[Rectangle] {self.__width} - {self.__height}"
+
+    def area(self):
+        """Returns the area of the rectangle."""
+        return self.__width * self.__height
+
