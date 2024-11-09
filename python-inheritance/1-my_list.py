@@ -15,6 +15,7 @@ class MyList(list):
         """
         Prints the list in ascending order without modifying the original list.
 
-        The sorted() function is used to return a new sorted list, which is then printed.
+        The sorted() function is used to return a new sorted list,
+        which is then printed.
         """
         print(sorted(self))
