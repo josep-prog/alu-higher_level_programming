@@ -15,4 +15,6 @@ def write_file(filename="", text=""):
     with open(filename, 'w', encoding="utf-8") as f:
         lines = [text]  # Wrap text in a list to use writelines
         f.writelines(lines)  # Write the list to the file
-        return sum(len(line) for line in lines)  # Return the total length of written characters
+
+        # Return the total length of written characters
+        return sum(len(line) for line in lines)
